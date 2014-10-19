@@ -58,7 +58,6 @@ class shell() :
     with self.lock :
       while True :
         if "succeed" in self.con.readline() :
-          print "TEST"
           break
 
   def send_str(self, data) :

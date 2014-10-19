@@ -1,0 +1,12 @@
+--- h8300-tdep.c.org	2014-10-20 02:03:44.781421520 +0900
++++ h8300-tdep.c	2014-10-20 02:04:30.257422976 +0900
+@@ -1251,7 +1251,8 @@
+ 			  int *lenptr)
+ {
+   /*static unsigned char breakpoint[] = { 0x7A, 0xFF }; *//* ??? */
+-  static unsigned char breakpoint[] = { 0x01, 0x80 };	/* Sleep */
++//  static unsigned char breakpoint[] = { 0x01, 0x80 };	/* Sleep */
++  static unsigned char breakpoint[] = { 0x57, 0x30 };  /* trapa #0x3 */
+ 
+   *lenptr = sizeof (breakpoint);
+   return breakpoint;

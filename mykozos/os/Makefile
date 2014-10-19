@@ -51,7 +51,7 @@ LFLAGS = -static -T ld.scr -L.
 .SUFFIXES: .S .o
 
 all :		$(TARGET)
-	python ./visualize.py
+	python autorun.py
 
 $(TARGET) :	$(OBJS)
 		$(CC) $(OBJS) -o $(TARGET) $(CFLAGS) $(LFLAGS)
